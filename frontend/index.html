@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+
+    <!-- botao para iniciar -->
+    <div class="start_btn"><button>Iniciar Quiz</button></div>
+
+    <div class="info_box">
+        <div class="info_title">
+            <span>Instruções sobre o Quiz</span>
+        </div>
+        <div class="info_list">
+            <div class="info">1. você terá apenas <span>15 segundos</span> para cada pergunta</div>
+            <div class="info">2. Depois de selecionar sua resposta, você não pode selecionar novamente</div>
+            <div class="info">3. você não pode selecionar nenhuma opção depois que o tempo acabar</div>
+            <div class="info">4. você não pode sair do quiz enquanto está jogando</div>
+            <div class="info">5. você ganhará pontos com base em suas respostas corretas</div>
+        </div>
+        <div class="buttons">
+            <button class="quit">Sair</button>
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+        <!-- Perguntas do professor para os alunos-->
+        <div class="quiz_box">
+            <header>
+                <div class="title">Awesome quiz application</div>
+                <div class="timer">
+                    <div class="time_text">Time left</div>
+                    <div class="timer_sec">15</div>
+                </div>
+            </header>
+            <section>
+                <div class="que_text">
+                    <span>De quem é a famosa frase “Penso, logo existo”?</span>
+                </div>
+                <div class="option_list">
+                    <div class="option">
+                        <span>Platão</span>
+                        <div class="icon cross"><i class="fas fa-times"></i></div> 
+                    </div>
+                    <div class="option">
+                        <span>Galileu Galilei</span>
+                        <div class="icon cross"><i class="fas fa-times"></i></div> 
+                    </div>
+                    <div class="option">
+                        <span>Francis Bacon</span>
+                        <div class="icon cross"><i class="fas fa-times"></i></div> 
+                    </div>
+                    <div class="option">
+                        <span>Descartes</span>
+                        <div class="icon tick"><i class="fas fa-check"></i></div> 
+                    </div>
+                    <div class="option">
+                        <span>Sócrates</span>
+                        <div class="icon cross"><i class="fas    fa-times"></i></div> 
+                    </div>
+                </div>
+            </section>
+            <footer >
+                <div class="total_que">
+                    <span><p>2</p>of<p>5</p>Questions</span>
+                </div>
+                <button class="next_btn">Next</button>
+            </footer>
+        </div>
+        <!--resultado do aluno-->
+        <div class="result_box">
+            <div class="icon">
+                <i class="fa fa-crown"></i>
+            </div>
+            <div class="complete-text">você completou o quiz!</div>
+            <div class="score_text">
+                <span>Parabéns você acertou <p>2</p> de <p>5</p></span>
+            </div>
+            <div class="buttons">
+                <button class="restart">Repetir quiz</button>
+                <button class="quit">Sair quiz</button>
+            </div>
+
+        </div>
+</body>
+</html>
