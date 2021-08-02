@@ -18,7 +18,9 @@
     * Para implementar o websocket usarei socket.io-- npm install socket.io
 
 ### Etapa 4 
-    * **criar o Backend*
+* **criar o Backend**
+    * Criar o servidor - server.js e conectar com o front
+
 
 ### Etapa 5 
 
