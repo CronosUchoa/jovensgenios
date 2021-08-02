@@ -8,7 +8,8 @@
 
 ### Etapa 2  
 * **criar o frontend*
-    * Criar o script em javascript. 
+    * Criar o script em javascript.
+    * Criar as questões hardcoded 
 
 ### Etapa 3 
 
