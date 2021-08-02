@@ -6,7 +6,9 @@
     * fazer o html e css da página.
 
 
-### Etapa 2     
+### Etapa 2  
+* **criar o frontend*
+    * Criar o script em javascript. 
 
 ### Etapa 3 
 
