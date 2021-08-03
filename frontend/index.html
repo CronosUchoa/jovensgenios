@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="https://kit.fontawesome.com/4c0d3b9cfa.js"></script>
 </head>
+
 <body>
 
     <!-- botao para iniciar -->
@@ -18,7 +20,7 @@
             <span>Instruções sobre o Quiz</span>
         </div>
         <div class="info_list">
-            <div class="info">1. você terá apenas <span>10   segundos</span> para cada pergunta</div>
+            <div class="info">1. você terá apenas <span>10 segundos</span> para cada pergunta</div>
             <div class="info">2. Depois de selecionar sua resposta, você não pode selecionar novamente</div>
             <div class="info">3. você não pode selecionar nenhuma opção depois que o tempo acabar</div>
             <div class="info">4. você não pode sair do quiz enquanto está jogando</div>
@@ -29,22 +31,22 @@
             <button class="restart">Continue</button>
         </div>
     </div>
-        <!-- Perguntas do professor para os alunos-->
-        <div class="quiz_box">
-            <header>
-                <div class="title">Ead - Mostre todos seus poderes !</div>
-                <div class="timer">
-                    <div class="time_text">Tempo</div>
-                    <div class="timer_sec">10</div>
-                </div>
-                <div class="time_line"></div>
-            </header>
-            <section>
-                <div class="que_text">
-                    <!-- <span>De quem é a famosa frase “Penso, logo existo”?</span> -->
-                </div>
-                <div class="option_list">
-                    <!-- <div class="option">
+    <!-- Perguntas do professor para os alunos-->
+    <div class="quiz_box">
+        <header>
+            <div class="title">Ead - Mostre todos seus poderes !</div>
+            <div class="timer">
+                <div class="time_text">Tempo</div>
+                <div class="timer_sec">10</div>
+            </div>
+            <div class="time_line"></div>
+        </header>
+        <section>
+            <div class="que_text">
+                <!-- <span>De quem é a famosa frase “Penso, logo existo”?</span> -->
+            </div>
+            <div class="option_list">
+                <!-- <div class="option">
                         <span>Platão</span>
                         <div class="icon cross"><i class="fas fa-times"></i></div> 
                     </div>
@@ -64,35 +66,43 @@
                         <span>Sócrates</span>
                         <div class="icon cross"><i class="fas    fa-times"></i></div> 
                     </div> -->
-                </div>
-            </section>
-            <footer >
-                <div class="total_que">
-                    <!-- <span><p>2</p>de<p>5</p>Questões</span> -->
-                </div>
-                <button class="next_btn">Próxima</button>
-            </footer>
+            </div>
+        </section>
+        <footer>
+            <div class="total_que">
+                <!-- <span><p>2</p>de<p>5</p>Questões</span> -->
+            </div>
+            <button class="next_btn" onclick="verResposta(this)">Próxima</button>
+        </footer>
+    </div>
+    <!--resultado do aluno-->
+    <div class="result_box">
+        <div class="icon">
+            <i class="fa fa-crown"></i>
         </div>
-        <!--resultado do aluno-->
-        <div class="result_box">
-            <div class="icon">
-                <i class="fa fa-crown"></i>
-            </div>
-            <div class="complete-text">você completou o quiz!</div>
-            <div class="score_text">
-                <!-- <span>Parabéns você acertou <p>2</p> de <p>5</p></span> -->
-            </div>
-            <div class="buttons">
-                <button class="restart">Repetir quiz</button>
-                <button class="quit">Sair quiz</button>
-            </div>
+        <div class="complete-text">você completou o quiz!</div>
+        <div class="score_text">
+            <!-- <span>Parabéns você acertou <p>2</p> de <p>5</p></span> -->
+        </div>
+        <div class="buttons">
+            <button class="restart">Repetir quiz</button>
+            <button class="quit">Sair quiz</button>
+        </div>
 
-        </div>
-        <script src="./js/scripts.js"></script>
-        <script src="./js/questions.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
-        <script type="text/javascript">
-            var socket = io('http://localhost:8080');
-        </script>
-    </body>
+    </div>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/questions.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.1.3/socket.io.js"></script>
+    <script type="text/javascript">
+        var socket = io('http://localhost:8080'); 
+        
+        function verResposta(answer) {
+            let respostaAluno  = answer.textContent;
+            console.log(respostaAluno); 
+            socket.emit('sendMessage', respostaAluno);
+        }
+        
+    </script>
+</body>
+
 </html>

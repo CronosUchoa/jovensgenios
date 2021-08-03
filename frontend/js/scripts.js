@@ -107,7 +107,7 @@ function showQuestions(index){
     const option = option_list.querySelectorAll(".option");
     let o = option.length;
     for(let i = 0; i < o; i++){
-        option[i].setAttribute("onclick", "optionSelected(this)");
+        option[i].setAttribute("onclick", "optionSelected(this), verResposta(this)");
     }
 
 }
@@ -129,6 +129,7 @@ function optionSelected(answer){
     if(respostaAluno == respostaCerta){
         userScore +=1;
         answer.classList.add("correct");
+        // console.log(respostaAluno);
         console.log("A resposta do aluno está certa.");
         answer.insertAdjacentHTML("beforeend", tickIcon);
     }else{
