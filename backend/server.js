@@ -26,6 +26,6 @@ io.on('connection', socket =>{
 
 })
 
-server.listen(8080, ()=>{
+server.listen(process.env.PORT || 8080, ()=>{
     console.log("Servidor : ativado - Port: 8080 - url: http://localhost:8080");
 });
