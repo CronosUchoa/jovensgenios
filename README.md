@@ -23,6 +23,7 @@
 
 
 ### Etapa 5 
+* **implementar o websocket**
 
 
 ### considerações finais.
