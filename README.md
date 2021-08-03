@@ -31,5 +31,7 @@
 ### Etapa 7 -- final
 * **deploy**
 
+HEROKU : https://jovensgenios-quiz.herokuapp.com
+
 
 
