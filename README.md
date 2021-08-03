@@ -26,5 +26,10 @@
 * **implementar o websocket**
 
 
-### considerações finais.
+### Etapa 6 
+* **Refatoração**
+### Etapa 7 -- final
+* **deploy**
+
+
 
