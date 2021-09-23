@@ -390,3 +390,65 @@ footer .next_btn:hover{
     transition:all 0.3s ease;
 }
 
+@media (max-width: 570px){
+
+    .info_box.activeInfo,
+    .quiz_box.activeQuiz,
+    .result_box.activeResult{
+        z-index: 5;
+        opacity: 1;
+        pointer-events:auto;
+        /* transform: translate(-50%,-50%) scale(1); */
+        width:100vw;
+        text-align: center; 
+        
+    }
+
+    .quiz_box section .que_text{
+        font-size:15px;
+        font-weight:600;
+    }
+
+    .quiz_box header .title{
+        font-size:15px;
+        font-weight: 600;
+    }
+
+    section .option_list .option{
+        /* background:#9393e6; 
+         border:1px solid #dcdcff;*/
+         background: #dcdcff;
+         border:1px solid #9393e6;
+         border-radius: 5px;
+         padding:8px 15px;
+         margin-bottom: 15px;
+         /*color:#e1e1ff;*/
+         display:flex;
+         font-size: 12px;
+         font-weight: 500;
+         align-items: center;
+         justify-content: space-between;
+         cursor: pointer;
+         transition: all 0.5s ease-in-out;
+     }
+     
+.quiz_box header .timer .time_text{
+    font-weight: 400;
+    font-size: 15px;
+    user-select:none;
+    margin: 5px;
+}
+
+
+.result_box .buttons button{
+    margin: 0 10px;
+    height:40px;
+    padding:0 20px;
+    outline:none;
+    font-size:15px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition:all 0.3s ease;
+}
+}
